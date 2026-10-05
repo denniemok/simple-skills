@@ -18,6 +18,7 @@ Each skill is short, concise, and does one job. No long checklists, no over-engi
 | `simple-debug` | Find serious bugs before ship | No |
 | `simple-code-review` | Review quality, security, and maintainability | Yes |
 | `simple-refactor` | Minimal refactor, remove redundancy (DRY) | No |
+| `simple-full-refactor` | Whole-repo refactor, plus leftover and unused file cleanup | Yes |
 | `simple-restructure` | Group files into domain folders, no logic changes | Yes |
 | `simple-commit` | Conventional commit with a secrets and junk-file check | No |
 | `simple-text-cleanup` | Clean up text formatting and punctuation | No |
@@ -40,6 +41,7 @@ Manual only skills set `disable-model-invocation: true`, so the agent never runs
 | `simple-restructure` | Moves many files |
 | `simple-release` | Bumps the version and creates tags |
 | `simple-launch` | Scans the whole repo and the build output |
+| `simple-full-refactor` | Edits the whole repo and deletes unused files |
 | `simple-code-review` | A broad review that overlaps built-in review commands, so you pick the moment |
 
 All other skills load automatically when the task matches. Other skills and agents rely on this: the reviewer runs `simple-check`, and the language skills run `simple-text-cleanup`. To change a skill, add or remove `disable-model-invocation: true` in its `SKILL.md` frontmatter.
@@ -121,6 +123,7 @@ simple-skills/
 ├── simple-debug/                  # Serious bug hunt
 ├── simple-code-review/            # Code review
 ├── simple-refactor/               # Minimal DRY refactor
+├── simple-full-refactor/          # Whole-repo refactor and cleanup
 ├── simple-restructure/            # Domain-based file layout
 ├── simple-commit/                 # Commit message and git flow
 ├── simple-text-cleanup/           # Text formatting cleanup

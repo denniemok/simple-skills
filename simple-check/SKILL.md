@@ -15,13 +15,15 @@ Evaluate the change that was just made, not the whole codebase. Scope is the cur
 
 1. The change is logically correct and does what was intended
 2. Existing functionality is intact, with no regressions, broken flows, or side effects
-3. Related code is updated too, such as call sites, types, tests, and docs
-4. Naming, structure, and patterns follow the repo's conventions
-5. Nothing is left behind, such as debug logs, commented-out code, TODOs, or secrets
+3. Related code is updated too, such as call sites, types, and tests
+4. Docs match the change: README, CLAUDE.md or AGENTS.md, docs folders, and other info files. Check features, setup steps, commands, env vars, config, and file trees that the change affects
+5. Naming, structure, and patterns follow the repo's conventions
+6. Nothing is left behind, such as debug logs, commented-out code, TODOs, or secrets
 
 ## Rules
 
 - Read the surrounding code and usages, not just the diff.
+- Search for docs that mention what changed, even if they are not in the diff.
 - Run the project's build, type check, lint, or tests when available. If you cannot, say what was not run.
 - Report only real issues you can point to. Do not pad with nitpicks.
 - Report only. Do not change code unless the user asks.
